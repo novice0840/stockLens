@@ -1,10 +1,12 @@
-import { loadDividendData, loadAnnualMetrics, loadSummary } from '@/lib/loadData';
+import { loadDividendData, loadQuarterlyDividendData, loadAnnualMetrics, loadQuarterlyMetrics, loadSummary } from '@/lib/loadData';
 import DividendChart from '@/components/DividendChart';
 import AnnualMetricsChart from '@/components/AnnualMetricsChart';
 
 export default function Home() {
   const dividendData = loadDividendData();
+  const quarterlyDividendData = loadQuarterlyDividendData();
   const annualMetrics = loadAnnualMetrics();
+  const quarterlyMetrics = loadQuarterlyMetrics();
   const summary = loadSummary();
 
   return (
@@ -31,10 +33,10 @@ export default function Home() {
         </div>
 
         {/* 배당금 & 배당률 차트 */}
-        <DividendChart data={dividendData} />
+        <DividendChart annualData={dividendData} quarterlyData={quarterlyDividendData} />
 
         {/* EPS / 주가 / 배당성향 차트 */}
-        <AnnualMetricsChart data={annualMetrics} />
+        <AnnualMetricsChart annualData={annualMetrics} quarterlyData={quarterlyMetrics} />
 
       </div>
     </main>
