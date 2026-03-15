@@ -1,4 +1,4 @@
-import { loadDividendData, loadQuarterlyDividendData, loadAnnualMetrics, loadQuarterlyMetrics, loadSummary } from '@/lib/loadData';
+import { loadDividendData, loadQuarterlyDividendData, loadAnnualMetrics, loadQuarterlyMetrics, loadCashFlowMetrics, loadValuationMetrics, loadTSYMetrics, loadSummary } from '@/lib/loadData';
 import DividendChart from '@/components/DividendChart';
 import AnnualMetricsChart from '@/components/AnnualMetricsChart';
 
@@ -7,6 +7,9 @@ export default function Home() {
   const quarterlyDividendData = loadQuarterlyDividendData();
   const annualMetrics = loadAnnualMetrics();
   const quarterlyMetrics = loadQuarterlyMetrics();
+  const cashFlowMetrics = loadCashFlowMetrics();
+  const valuationMetrics = loadValuationMetrics();
+  const tsyMetrics = loadTSYMetrics();
   const summary = loadSummary();
 
   return (
@@ -36,7 +39,7 @@ export default function Home() {
         <DividendChart annualData={dividendData} quarterlyData={quarterlyDividendData} />
 
         {/* EPS / 주가 / 배당성향 차트 */}
-        <AnnualMetricsChart annualData={annualMetrics} quarterlyData={quarterlyMetrics} />
+        <AnnualMetricsChart annualData={annualMetrics} quarterlyData={quarterlyMetrics} cashFlowData={cashFlowMetrics} valuationData={valuationMetrics} tsyData={tsyMetrics} />
 
       </div>
     </main>

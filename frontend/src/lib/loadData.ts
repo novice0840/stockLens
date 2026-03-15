@@ -43,6 +43,38 @@ export interface AnnualMetric {
   dividendYield: number;
 }
 
+export interface ValuationMetric {
+  label: string;
+  date: string;
+  price: number;
+  ttmEps: number | null;
+  ttmPer: number | null;
+  bvps: number;
+  pbr: number | null;
+}
+
+export interface TSYMetric {
+  label: string;
+  date: string;
+  dividendYield: number;
+  buybackYield: number;
+  tsy: number;
+  ttmDividendYield: number | null;
+  ttmBuybackYield: number | null;
+  ttmTsy: number | null;
+}
+
+export interface CashFlowMetric {
+  label: string;
+  date: string;
+  operatingCF: number;       // 총액 (B)
+  freeCF: number;            // 총액 (B)
+  capex: number;             // 총액 (B)
+  operatingCFPerShare: number;
+  freeCFPerShare: number;
+  capexPerShare: number;
+}
+
 export interface QuarterlyMetric {
   label: string; // "FY25 Q1"
   date: string;
@@ -166,6 +198,132 @@ export function loadAnnualMetrics(): AnnualMetric[] {
       dividendYield: r.dividendYieldPercentage,
     }))
     .sort((a, b) => a.year.localeCompare(b.year));
+}
+
+interface CashFlowRecord {
+  date: string;
+  fiscalYear: string;
+  period: string;
+  operatingCashFlow: number;
+  freeCashFlow: number;
+  capitalExpenditure: number;
+  weightedAverageShsOut: number;
+}
+
+interface SymbolCashFlowRecord {
+  fiscalYear: string;
+  operatingCashFlowPerShare: number;
+  freeCashFlowPerShare: number;
+  capexPerShare: number;
+}
+
+export function loadCashFlowMetrics(): { annual: CashFlowMetric[]; quarterly: CashFlowMetric[] } {
+  const quarterly = readJson<CashFlowRecord[]>('aapl-cashflow-quarterly.json')
+    .map((r) => {
+      const shares = r.weightedAverageShsOut || 1;
+      return {
+        label: `${r.fiscalYear} ${r.period}`,
+        date: r.date,
+        operatingCF: r.operatingCashFlow / 1e9,
+        freeCF: r.freeCashFlow / 1e9,
+        capex: Math.abs(r.capitalExpenditure) / 1e9,
+        operatingCFPerShare: r.operatingCashFlow / shares,
+        freeCFPerShare: r.freeCashFlow / shares,
+        capexPerShare: Math.abs(r.capitalExpenditure) / shares,
+      };
+    })
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const symbolRecords = readJson<SymbolCashFlowRecord[]>('apple-symbol.json');
+  const annual = symbolRecords
+    .map((r) => ({
+      label: r.fiscalYear,
+      date: r.fiscalYear,
+      operatingCF: r.operatingCashFlowPerShare * 15,  // 근사치
+      freeCF: r.freeCashFlowPerShare * 15,
+      capex: r.capexPerShare * 15,
+      operatingCFPerShare: r.operatingCashFlowPerShare,
+      freeCFPerShare: r.freeCashFlowPerShare,
+      capexPerShare: r.capexPerShare,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+
+  // 연간은 분기 데이터를 FY 기준으로 합산
+  const byYear: Record<string, CashFlowMetric[]> = {};
+  for (const q of quarterly) {
+    const fy = q.label.split(' ')[0];
+    if (!byYear[fy]) byYear[fy] = [];
+    byYear[fy].push(q);
+  }
+
+  const annualFromQuarterly = Object.entries(byYear)
+    .map(([fy, quarters]) => ({
+      label: fy,
+      date: fy,
+      operatingCF: quarters.reduce((s, q) => s + q.operatingCF, 0),
+      freeCF: quarters.reduce((s, q) => s + q.freeCF, 0),
+      capex: quarters.reduce((s, q) => s + q.capex, 0),
+      operatingCFPerShare: symbolRecords.find((r) => r.fiscalYear === fy)?.operatingCashFlowPerShare ?? 0,
+      freeCFPerShare: symbolRecords.find((r) => r.fiscalYear === fy)?.freeCashFlowPerShare ?? 0,
+      capexPerShare: symbolRecords.find((r) => r.fiscalYear === fy)?.capexPerShare ?? 0,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+
+  void annual;
+  return { annual: annualFromQuarterly, quarterly };
+}
+
+interface ValuationRecord {
+  date: string;
+  fiscalYear: string;
+  period: string;
+  price: number;
+  ttmEps: number | null;
+  ttmPer: number | null;
+  bvps: number;
+  pbr: number | null;
+}
+
+export function loadValuationMetrics(): ValuationMetric[] {
+  const records = readJson<ValuationRecord[]>('aapl-valuation-quarterly.json');
+  return records
+    .filter((r) => r.ttmPer !== null)
+    .map((r) => ({
+      label: `${r.fiscalYear} ${r.period}`,
+      date: r.date,
+      price: r.price,
+      ttmEps: r.ttmEps,
+      ttmPer: r.ttmPer,
+      bvps: r.bvps,
+      pbr: r.pbr,
+    }))
+    .sort((a, b) => a.date.localeCompare(b.date));
+}
+
+interface TSYRecord {
+  date: string;
+  fiscalYear: string;
+  period: string;
+  dividendYield: number;
+  buybackYield: number;
+  tsy: number;
+  ttm: { dividendYield: number; buybackYield: number; tsy: number } | null;
+}
+
+export function loadTSYMetrics(): TSYMetric[] {
+  const records = readJson<TSYRecord[]>('aapl-tsy-quarterly.json');
+  return records
+    .map((r) => ({
+      label: `${r.fiscalYear} ${r.period}`,
+      date: r.date,
+      dividendYield: r.dividendYield,
+      buybackYield: r.buybackYield,
+      tsy: r.tsy,
+      ttmDividendYield: r.ttm?.dividendYield ?? null,
+      ttmBuybackYield: r.ttm?.buybackYield ?? null,
+      ttmTsy: r.ttm?.tsy ?? null,
+    }))
+    .sort((a, b) => a.date.localeCompare(b.date));
 }
 
 export function loadSummary() {

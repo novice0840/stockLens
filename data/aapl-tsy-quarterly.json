@@ -1,0 +1,330 @@
+[
+  {
+    "date": "2021-03-27",
+    "fiscalYear": "2021",
+    "period": "Q2",
+    "price": 118.04,
+    "marketCap": 1977.6,
+    "buybackAmount": 18.548,
+    "dividendAmount": 3.447,
+    "buybackYield": 0.94,
+    "dividendYield": 0.17,
+    "tsy": 1.11,
+    "ttm": null
+  },
+  {
+    "date": "2021-06-26",
+    "fiscalYear": "2021",
+    "period": "Q3",
+    "price": 129.85,
+    "marketCap": 2159.3,
+    "buybackAmount": 22.9,
+    "dividendAmount": 3.767,
+    "buybackYield": 1.06,
+    "dividendYield": 0.17,
+    "tsy": 1.23,
+    "ttm": null
+  },
+  {
+    "date": "2021-09-25",
+    "fiscalYear": "2021",
+    "period": "Q4",
+    "price": 143.54,
+    "marketCap": 2366.6,
+    "buybackAmount": 19.748,
+    "dividendAmount": 3.64,
+    "buybackYield": 0.83,
+    "dividendYield": 0.15,
+    "tsy": 0.99,
+    "ttm": null
+  },
+  {
+    "date": "2021-12-25",
+    "fiscalYear": "2022",
+    "period": "Q1",
+    "price": 172.48,
+    "marketCap": 2827.2,
+    "buybackAmount": 20.478,
+    "dividendAmount": 3.732,
+    "buybackYield": 0.72,
+    "dividendYield": 0.13,
+    "tsy": 0.86,
+    "ttm": {
+      "buybackYield": 3.55,
+      "dividendYield": 0.62,
+      "tsy": 4.19
+    }
+  },
+  {
+    "date": "2022-03-26",
+    "fiscalYear": "2022",
+    "period": "Q2",
+    "price": 171.16,
+    "marketCap": 2786.3,
+    "buybackAmount": 22.631,
+    "dividendAmount": 3.595,
+    "buybackYield": 0.81,
+    "dividendYield": 0.13,
+    "tsy": 0.94,
+    "ttm": {
+      "buybackYield": 3.42,
+      "dividendYield": 0.58,
+      "tsy": 4.02
+    }
+  },
+  {
+    "date": "2022-06-25",
+    "fiscalYear": "2022",
+    "period": "Q3",
+    "price": 138.99,
+    "marketCap": 2246.5,
+    "buybackAmount": 21.865,
+    "dividendAmount": 3.811,
+    "buybackYield": 0.97,
+    "dividendYield": 0.17,
+    "tsy": 1.14,
+    "ttm": {
+      "buybackYield": 3.33,
+      "dividendYield": 0.58,
+      "tsy": 3.93
+    }
+  },
+  {
+    "date": "2022-09-24",
+    "fiscalYear": "2022",
+    "period": "Q4",
+    "price": 147.8,
+    "marketCap": 2369.3,
+    "buybackAmount": 24.428,
+    "dividendAmount": 3.703,
+    "buybackYield": 1.03,
+    "dividendYield": 0.16,
+    "tsy": 1.19,
+    "ttm": {
+      "buybackYield": 3.53,
+      "dividendYield": 0.59,
+      "tsy": 4.13
+    }
+  },
+  {
+    "date": "2022-12-31",
+    "fiscalYear": "2023",
+    "period": "Q1",
+    "price": 127.87,
+    "marketCap": 2032.2,
+    "buybackAmount": 19.475,
+    "dividendAmount": 3.768,
+    "buybackYield": 0.96,
+    "dividendYield": 0.19,
+    "tsy": 1.14,
+    "ttm": {
+      "buybackYield": 3.77,
+      "dividendYield": 0.65,
+      "tsy": 4.41
+    }
+  },
+  {
+    "date": "2023-04-01",
+    "fiscalYear": "2023",
+    "period": "Q2",
+    "price": 162.54,
+    "marketCap": 2566,
+    "buybackAmount": 19.594,
+    "dividendAmount": 3.65,
+    "buybackYield": 0.76,
+    "dividendYield": 0.14,
+    "tsy": 0.91,
+    "ttm": {
+      "buybackYield": 3.72,
+      "dividendYield": 0.66,
+      "tsy": 4.38
+    }
+  },
+  {
+    "date": "2023-07-01",
+    "fiscalYear": "2023",
+    "period": "Q3",
+    "price": 191.45,
+    "marketCap": 3005.3,
+    "buybackAmount": 17.478,
+    "dividendAmount": 3.849,
+    "buybackYield": 0.58,
+    "dividendYield": 0.13,
+    "tsy": 0.71,
+    "ttm": {
+      "buybackYield": 3.33,
+      "dividendYield": 0.62,
+      "tsy": 3.95
+    }
+  },
+  {
+    "date": "2023-09-30",
+    "fiscalYear": "2023",
+    "period": "Q4",
+    "price": 169.22,
+    "marketCap": 2639.7,
+    "buybackAmount": 21.003,
+    "dividendAmount": 3.758,
+    "buybackYield": 0.8,
+    "dividendYield": 0.14,
+    "tsy": 0.94,
+    "ttm": {
+      "buybackYield": 3.1,
+      "dividendYield": 0.6,
+      "tsy": 3.7
+    }
+  },
+  {
+    "date": "2023-12-30",
+    "fiscalYear": "2024",
+    "period": "Q1",
+    "price": 190.55,
+    "marketCap": 2955.4,
+    "buybackAmount": 20.139,
+    "dividendAmount": 3.825,
+    "buybackYield": 0.68,
+    "dividendYield": 0.13,
+    "tsy": 0.81,
+    "ttm": {
+      "buybackYield": 2.82,
+      "dividendYield": 0.54,
+      "tsy": 3.37
+    }
+  },
+  {
+    "date": "2024-03-30",
+    "fiscalYear": "2024",
+    "period": "Q2",
+    "price": 169.93,
+    "marketCap": 2617.9,
+    "buybackAmount": 23.205,
+    "dividendAmount": 3.71,
+    "buybackYield": 0.89,
+    "dividendYield": 0.14,
+    "tsy": 1.03,
+    "ttm": {
+      "buybackYield": 2.95,
+      "dividendYield": 0.54,
+      "tsy": 3.49
+    }
+  },
+  {
+    "date": "2024-06-29",
+    "fiscalYear": "2024",
+    "period": "Q3",
+    "price": 209,
+    "marketCap": 3195.1,
+    "buybackAmount": 26.522,
+    "dividendAmount": 3.895,
+    "buybackYield": 0.83,
+    "dividendYield": 0.12,
+    "tsy": 0.95,
+    "ttm": {
+      "buybackYield": 3.2,
+      "dividendYield": 0.53,
+      "tsy": 3.73
+    }
+  },
+  {
+    "date": "2024-09-28",
+    "fiscalYear": "2024",
+    "period": "Q4",
+    "price": 226.31,
+    "marketCap": 3433.6,
+    "buybackAmount": 25.083,
+    "dividendAmount": 3.804,
+    "buybackYield": 0.73,
+    "dividendYield": 0.11,
+    "tsy": 0.84,
+    "ttm": {
+      "buybackYield": 3.13,
+      "dividendYield": 0.5,
+      "tsy": 3.63
+    }
+  },
+  {
+    "date": "2024-12-28",
+    "fiscalYear": "2025",
+    "period": "Q1",
+    "price": 254.21,
+    "marketCap": 3833.9,
+    "buybackAmount": 23.606,
+    "dividendAmount": 3.856,
+    "buybackYield": 0.62,
+    "dividendYield": 0.1,
+    "tsy": 0.72,
+    "ttm": {
+      "buybackYield": 3.07,
+      "dividendYield": 0.47,
+      "tsy": 3.54
+    }
+  },
+  {
+    "date": "2025-03-29",
+    "fiscalYear": "2025",
+    "period": "Q2",
+    "price": 216.96,
+    "marketCap": 3253.1,
+    "buybackAmount": 25.898,
+    "dividendAmount": 3.758,
+    "buybackYield": 0.8,
+    "dividendYield": 0.12,
+    "tsy": 0.91,
+    "ttm": {
+      "buybackYield": 2.98,
+      "dividendYield": 0.45,
+      "tsy": 3.42
+    }
+  },
+  {
+    "date": "2025-06-28",
+    "fiscalYear": "2025",
+    "period": "Q3",
+    "price": 200.47,
+    "marketCap": 2987.6,
+    "buybackAmount": 21.075,
+    "dividendAmount": 3.945,
+    "buybackYield": 0.71,
+    "dividendYield": 0.13,
+    "tsy": 0.84,
+    "ttm": {
+      "buybackYield": 2.86,
+      "dividendYield": 0.46,
+      "tsy": 3.31
+    }
+  },
+  {
+    "date": "2025-09-27",
+    "fiscalYear": "2025",
+    "period": "Q4",
+    "price": 254.97,
+    "marketCap": 3811.4,
+    "buybackAmount": 20.132,
+    "dividendAmount": 3.862,
+    "buybackYield": 0.53,
+    "dividendYield": 0.1,
+    "tsy": 0.63,
+    "ttm": {
+      "buybackYield": 2.66,
+      "dividendYield": 0.45,
+      "tsy": 3.1
+    }
+  },
+  {
+    "date": "2025-12-27",
+    "fiscalYear": "2026",
+    "period": "Q1",
+    "price": 273.15,
+    "marketCap": 4028.5,
+    "buybackAmount": 24.701,
+    "dividendAmount": 3.921,
+    "buybackYield": 0.61,
+    "dividendYield": 0.1,
+    "tsy": 0.71,
+    "ttm": {
+      "buybackYield": 2.65,
+      "dividendYield": 0.45,
+      "tsy": 3.09
+    }
+  }
+]

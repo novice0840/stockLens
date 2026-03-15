@@ -1,0 +1,162 @@
+[
+  {
+    "date": "2025-12-27",
+    "fiscalYear": "2026",
+    "period": "Q1",
+    "epsDiluted": 2.84,
+    "adjDividend": 0.26,
+    "payoutRatio": 9.15
+  },
+  {
+    "date": "2025-09-27",
+    "fiscalYear": "2025",
+    "period": "Q4",
+    "epsDiluted": 1.85,
+    "adjDividend": 0.26,
+    "payoutRatio": 14.05
+  },
+  {
+    "date": "2025-06-28",
+    "fiscalYear": "2025",
+    "period": "Q3",
+    "epsDiluted": 1.57,
+    "adjDividend": 0.26,
+    "payoutRatio": 16.56
+  },
+  {
+    "date": "2025-03-29",
+    "fiscalYear": "2025",
+    "period": "Q2",
+    "epsDiluted": 1.65,
+    "adjDividend": 0.25,
+    "payoutRatio": 15.15
+  },
+  {
+    "date": "2024-12-28",
+    "fiscalYear": "2025",
+    "period": "Q1",
+    "epsDiluted": 2.4,
+    "adjDividend": 0.25,
+    "payoutRatio": 10.42
+  },
+  {
+    "date": "2024-09-28",
+    "fiscalYear": "2024",
+    "period": "Q4",
+    "epsDiluted": 0.97,
+    "adjDividend": 0.25,
+    "payoutRatio": 25.77
+  },
+  {
+    "date": "2024-06-29",
+    "fiscalYear": "2024",
+    "period": "Q3",
+    "epsDiluted": 1.4,
+    "adjDividend": 0.25,
+    "payoutRatio": 17.86
+  },
+  {
+    "date": "2024-03-30",
+    "fiscalYear": "2024",
+    "period": "Q2",
+    "epsDiluted": 1.53,
+    "adjDividend": 0.24,
+    "payoutRatio": 15.69
+  },
+  {
+    "date": "2023-12-30",
+    "fiscalYear": "2024",
+    "period": "Q1",
+    "epsDiluted": 2.18,
+    "adjDividend": 0.24,
+    "payoutRatio": 11.01
+  },
+  {
+    "date": "2023-09-30",
+    "fiscalYear": "2023",
+    "period": "Q4",
+    "epsDiluted": 1.46,
+    "adjDividend": 0.24,
+    "payoutRatio": 16.44
+  },
+  {
+    "date": "2023-07-01",
+    "fiscalYear": "2023",
+    "period": "Q3",
+    "epsDiluted": 1.26,
+    "adjDividend": 0.24,
+    "payoutRatio": 19.05
+  },
+  {
+    "date": "2023-04-01",
+    "fiscalYear": "2023",
+    "period": "Q2",
+    "epsDiluted": 1.52,
+    "adjDividend": 0.23,
+    "payoutRatio": 15.13
+  },
+  {
+    "date": "2022-12-31",
+    "fiscalYear": "2023",
+    "period": "Q1",
+    "epsDiluted": 1.88,
+    "adjDividend": 0.23,
+    "payoutRatio": 12.23
+  },
+  {
+    "date": "2022-09-24",
+    "fiscalYear": "2022",
+    "period": "Q4",
+    "epsDiluted": 1.29,
+    "adjDividend": 0.23,
+    "payoutRatio": 17.83
+  },
+  {
+    "date": "2022-06-25",
+    "fiscalYear": "2022",
+    "period": "Q3",
+    "epsDiluted": 1.2,
+    "adjDividend": 0.23,
+    "payoutRatio": 19.17
+  },
+  {
+    "date": "2022-03-26",
+    "fiscalYear": "2022",
+    "period": "Q2",
+    "epsDiluted": 1.52,
+    "adjDividend": 0.22,
+    "payoutRatio": 14.47
+  },
+  {
+    "date": "2021-12-25",
+    "fiscalYear": "2022",
+    "period": "Q1",
+    "epsDiluted": 2.1,
+    "adjDividend": 0.22,
+    "payoutRatio": 10.48
+  },
+  {
+    "date": "2021-09-25",
+    "fiscalYear": "2021",
+    "period": "Q4",
+    "epsDiluted": 1.24,
+    "adjDividend": 0.22,
+    "payoutRatio": 17.74
+  },
+  {
+    "date": "2021-06-26",
+    "fiscalYear": "2021",
+    "period": "Q3",
+    "epsDiluted": 1.3,
+    "adjDividend": 0.22,
+    "payoutRatio": 16.92
+  },
+  {
+    "date": "2021-03-27",
+    "fiscalYear": "2021",
+    "period": "Q2",
+    "epsDiluted": 1.4,
+    "adjDividend": 0.205,
+    "payoutRatio": 14.64
+  }
+]
